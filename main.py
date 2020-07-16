@@ -8,7 +8,7 @@ url = "https://www.tor.com/series/malazan-reread-of-the-fallen/"
 page = requests.get(url, headers=hdr)
 soup = BeautifulSoup(page.text, 'html.parser')
 
-#gotm0-13 nok15-19 deadhouse 21-33 moi35-56 hoc57-82 midnight86-113 bone116-144 reap146-173 rocg176-203 tth206-240 stone242-259 dod260-275,277-288 tcg291-320 ost323-346 thd349-352 BF353-354 CPT355-366 tlole-367-368 bab-369-396 twob397-400 assail401-420
+skip_list = [13, 20, 34, 57, 84, 85, 86, 115, 116, 146, 175, 176, 205, 206, 242, 277, 290, 291, 322, 348, 349]
 
 target_list = []
 link_list = soup.find_all(class_='entry-header')
